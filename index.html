@@ -3,168 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LUNA Cafe & Rest</title>
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  background:#050505;
+  font-family:Arial,sans-serif;
 }
 
 body{
-    margin:0;
-    background:#000;
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    overflow-x:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  min-height:100dvh;
+  overflow:hidden;
 }
 
-/* الصورة كاملة */
-
+/* الصورة الرئيسية */
 .design{
-    position:relative;
+  position:relative;
 
-    width:100vw;
-    max-width:1536px;
+  width:min(100vw, 920px);
+  height:min(100vh, 1635px);
+  height:min(100dvh, 1635px);
 
-    aspect-ratio:3 / 2;
+  aspect-ratio:9 / 16;
 
-    background-image:url("background.PNG");
-    background-size:100% 100%;
-    background-repeat:no-repeat;
-    background-position:center;
+  background-image:url("background.png");
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  flex-shrink:0;
 }
 
-
-/* أماكن الضغط */
-
+/* مناطق الضغط */
 .link{
-    position:absolute;
-    display:block;
-
-    z-index:10;
-
-    border-radius:25px;
+  position:absolute;
+  display:block;
+  z-index:10;
 }
 
-
-/* VIEW MENU */
-
+/* View Menu */
 .menu{
-    left:32.1%;
-    top:39.1%;
-
-    width:35.8%;
-    height:9.2%;
+  left:19%;
+  top:36.3%;
+  width:62%;
+  height:9.3%;
 }
 
-
-/* INSTAGRAM */
-
+/* Instagram */
 .instagram{
-    left:32.1%;
-    top:49.7%;
-
-    width:35.8%;
-    height:9.2%;
+  left:19%;
+  top:46.6%;
+  width:62%;
+  height:9.3%;
 }
 
-
-/* SNAPCHAT */
-
+/* Snapchat */
 .snapchat{
-    left:32.1%;
-    top:60.2%;
-
-    width:35.8%;
-    height:9.2%;
+  left:19%;
+  top:57%;
+  width:62%;
+  height:9.3%;
 }
 
-
-/* CALL NOW */
-
+/* Call Now */
 .call{
-    left:32.1%;
-    top:70.8%;
-
-    width:35.8%;
-    height:9.2%;
+  left:19%;
+  top:67.4%;
+  width:62%;
+  height:9.3%;
 }
 
+/* iPad & Laptop */
+@media (min-width:700px){
 
-/* للموبايل */
+  body{
+    background:
+      radial-gradient(circle at center,#2b1d0b 0%,#080808 45%,#000 100%);
+    padding:20px;
+  }
 
-@media(max-width:700px){
+  .design{
+    max-height:95vh;
+    max-height:95dvh;
+    width:auto;
+  }
+}
 
-    body{
-        background:#050505;
-        align-items:flex-start;
-    }
+/* iPhone */
+@media (max-width:699px){
 
-    .design{
-        margin-top:0;
-    }
+  body{
+    align-items:center;
+    padding:0;
+  }
 
+  .design{
+    width:100vw;
+    height:100vh;
+    height:100dvh;
+
+    background-size:cover;
+    background-position:center;
+  }
 }
 
 </style>
-
 </head>
 
 <body>
 
-
 <div class="design">
 
+  <a
+    class="link menu"
+    href="luna.pdf"
+    target="_blank"
+    aria-label="View Menu">
+  </a>
 
-    <!-- VIEW MENU -->
+  <a
+    class="link instagram"
+    href="https://www.instagram.com/luna_cafeandrest"
+    target="_blank"
+    aria-label="Instagram">
+  </a>
 
-    <a
-       class="link menu"
-       href="luna.pdf"
-       target="_blank"
-       aria-label="View Menu">
-    </a>
+  <a
+    class="link snapchat"
+    href="https://snapchat.com/t/bYnMb9Fr"
+    target="_blank"
+    aria-label="Snapchat">
+  </a>
 
-
-    <!-- INSTAGRAM -->
-
-    <a
-       class="link instagram"
-       href="https://www.instagram.com/luna_cafeandrest"
-       target="_blank"
-       aria-label="Instagram">
-    </a>
-
-
-    <!-- SNAPCHAT -->
-
-    <a
-       class="link snapchat"
-       href="https://snapchat.com/t/bYnMb9Fr"
-       target="_blank"
-       aria-label="Snapchat">
-    </a>
-
-
-    <!-- CALL -->
-
-    <a
-       class="link call"
-       href="tel:07502352688"
-       aria-label="Call Now">
-    </a>
-
+  <a
+    class="link call"
+    href="tel:07502352688"
+    aria-label="Call Now">
+  </a>
 
 </div>
-
 
 </body>
 </html>
